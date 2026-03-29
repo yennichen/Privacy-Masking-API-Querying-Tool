@@ -1,67 +1,74 @@
-🛡️ Privacy Masking & Multi-Chain API Querying Tool
-A professional OSINT utility for Web3 analysts to automate data masking, evidence collection, and multi-chain address screening.
+# 🛡️ Privacy Masking & Multi-Chain API Querying Tool
 
-🌟 Overview
-This tool is designed to solve two major pain points in crypto investigations:
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Web3](https://img.shields.io/badge/Web3-Intelligence-orange?style=for-the-badge)
 
-Privacy Masking: Automatically blurs PII (Emails, Internal IDs) on webpages before taking screenshots.
+An advanced, automated OSINT utility designed for **Web3 Intelligence Analysts**. This tool streamlines the process of capturing evidence while ensuring operational security (OPSEC) through automated data masking and real-time on-chain history screening.
 
-Instant Radar: Automatically checks if a crypto address has historical transactions across 20+ tokens (BTC, ETH, TRC20, SOL, etc.) the moment you capture the data.
+---
 
-🚀 Features
-One-Click Masking: Uses a Chrome Extension to mosaic sensitive text via DOM manipulation.
+## 🌟 Overview
 
-Smart Naming: Automatically saves screenshots with standardized filenames based on internal entity mapping.
+Investigating crypto crimes often requires capturing dozens of screenshots while cross-referencing multiple blockchains. This tool eliminates the manual grind:
 
-Multi-Chain Support: - EVM & L2s: via Moralis API.
+* **⚡ Instant OPSEC:** Automatically blurs sensitive PII (Emails, IDs) before you hit capture.
+* **📡 Smart Radar:** Does the "boring work" of checking 20+ tokens' history across 5+ different API/Node providers in the background.
 
-Tron (TRC20): via TronGrid API.
+---
 
-UTXO (BTC/LTC): via Mempool/Litecoinspace public nodes.
+## 🚀 Key Features
 
-Solana: via official Public RPC nodes.
+| Feature | Description |
+| :--- | :--- |
+| **1-Click Masking** | Uses a Chrome Extension to mosaic sensitive text via real-time DOM manipulation. |
+| **Smart Naming** | Auto-saves screenshots with standardized filenames: `Entity_Token_Address.png`. |
+| **Multi-Chain Radar** | Background API routing to check if an address is active or a "fresh" burner. |
+| **Taskbar Filtering** | Automatically crops the OS taskbar for clean, report-ready forensic evidence. |
 
-Background Processing: History checks run in the background without slowing down your investigative workflow.
+---
 
-🛠️ Setup & Installation
-Prerequisites
-Python 3.10+
+## ⛓️ Supported Chains & Methods
 
-Google Chrome Browser
+| Ecosystem | Tokens Supported | Provider |
+| :--- | :--- | :--- |
+| **EVM & L2s** | ETH, BSC, Polygon, AVAX, ARB, OP | **Moralis API** |
+| **Tron** | TRX, USDT-TRC20 | **TronGrid API** |
+| **UTXO** | BTC, LTC | **Mempool / Litecoinspace** |
+| **Solana** | SOL | **Official Public RPC** |
+| **TON** | TON | **TonAPI** |
 
-Installation
-Clone the repository:
+---
 
-Bash
-git clone https://github.com/yennichen/Privacy-Masking-API-Querying-Tool.git
+## 🛠️ Setup & Installation
+
+### 1. Prerequisites
+* **Python 3.10+**
+* **Google Chrome Browser**
+
+### 2. Installation
+```bash
+# Clone the repository
+git clone [https://github.com/yennichen/Privacy-Masking-API-Querying-Tool.git](https://github.com/yennichen/Privacy-Masking-API-Querying-Tool.git)
+
+# Enter the directory
 cd Privacy-Masking-API-Querying-Tool
-Install dependencies:
 
-Bash
+# Install dependencies
 pip install -r requirements.txt
-Configure your API Keys in AutoMask_API.py:
 
-MORALIS_API_KEY
+```
 
-TRONGRID_API_KEY
+### 3. Configuration
+Open AutoMask_API.py and input your keys:
 
-Load the Extension:
+### 4. Operational Workflow
+1. Launch: Run python AutoMask_API.py.
+2. Trigger: Press Win + W (or Alt + W) to start the sequence.
+3. Capture Data: Copy URL ➔ Address ➔ Token (Ctrl+C for each).
+4. Execute: Click the Extension Icon in Chrome to mask and capture.
+5. Analyze: Review the On-chain Radar results in your terminal instantly.
 
-Open Chrome chrome://extensions/
-
-Enable "Developer mode".
-
-Click "Load unpacked" and select the AutoMask_Extension folder.
-
-⌨️ How to Use
-Run the script:
-
-Bash
-python AutoMask_API.py
-Press Win + W (or Alt + W) to start the recording sequence.
-
-Copy URL -> Address -> Token (Ctrl+C for each).
-
-Click the Chrome Extension icon on the target page to mask and capture.
-
-Check your terminal for the On-chain Radar Analysis.
+### 5. Disclaimer
+[!IMPORTANT]
+This tool is developed for forensic investigation and educational purposes only. The author is not responsible for any misuse. Always ensure you have the proper authorization before conducting on-chain analysis.
