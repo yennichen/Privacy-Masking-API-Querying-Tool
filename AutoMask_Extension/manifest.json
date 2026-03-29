@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Chainlabs AutoMask Shutter",
+    "version": "2.6",
+    "action": {
+        "default_title": "Click to mask and screenshot"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://127.0.0.1/*",
+        "http://localhost/*"
+    ]
+}

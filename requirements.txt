@@ -1,0 +1,6 @@
+```text
+pyperclip
+keyboard
+pyautogui
+Pillow
+requests

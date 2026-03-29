@@ -1,0 +1,4 @@
+automask/screenshots_in/*
+automask/json/sensitive_data.json
+__pycache__/
+*.png
